@@ -1,0 +1,28 @@
+[
+    {
+        "albumName": "To Pimp a Butterfly",
+        "artistName": "Kendrick Lamar",
+        "image": "Assets/img/TPAB.jpg"
+    },
+    {
+        "albumName": "My Beautiful Dark Twisted Fantasy",
+        "artistName": "Kanye West",
+        "image": "Assets/img/MBDTF.jpg"
+    },
+    {
+        "albumName": "Atrocity Exhibition",
+        "artistName": "Danny Brown",
+        "image": "Assets/img/AtrocityExhibition.jpg"
+    },
+    {
+        "albumName": "Flower Boy",
+        "artistName": "Tyler, The Creator",
+        "image": "Assets/img/FlowerBoy.jpg"
+    },
+    {
+        "albumName": "2014 Forest Hills Drive",
+        "artistName": "J. Cole",
+        "image": "Assets/img/JCole.jpg"
+    }
+
+]

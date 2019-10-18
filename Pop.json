@@ -1,0 +1,28 @@
+[
+    {
+        "albumName": "Lemonade",
+        "artistName": "Beyonce",
+        "image": "Assets/img/Lemonade.jpg"
+    },
+    {
+        "albumName": "Pure Heroine",
+        "artistName": "Lorde",
+        "image": "Assets/img/Lorde.png"
+    },
+    {
+        "albumName": "1989",
+        "artistName": "Taylor Swift",
+        "image": "Assets/img/1989.jpg"
+    },
+    {
+        "albumName": "X",
+        "artistName": "Ed Sheeran",
+        "image": "Assets/img/Ed.png"
+    },
+    {
+        "albumName": "25",
+        "artistName": "Adele",
+        "image": "Assets/img/25.png"
+    }
+
+]
