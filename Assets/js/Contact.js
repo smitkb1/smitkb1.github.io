@@ -8,3 +8,5 @@ const cheersMessage =(e) =>{
 }
 
 document.getElementById('Submit-Button').addEventListener('click', cheersMessage).append('cheer')
+
+

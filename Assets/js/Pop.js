@@ -10,7 +10,7 @@ window.onload = () => {
     } */
 
     xhr.onload = () => {
-        var i = 0;
+        let i = 0;
         if (xhr.status === 200) {
             console.log('Current state: ', xhr.readyState)
             console.log(xhr.responseText)
@@ -19,7 +19,7 @@ window.onload = () => {
             Pop.forEach(p => {
                 const {albumName, artistName, image } = p
                 console.log(p)
-                var URL = p.image
+                let URL = p.image
                 document.getElementById(`Image${i}`).src = URL
                 document.getElementById(`Album-Head${i}`).append(p.albumName)
                 document.getElementById(`Artist-Head${i}`).append(p.artistName)
@@ -33,3 +33,15 @@ window.onload = () => {
 
     xhr.send()
 }
+
+document.getElementById('Submit-Button').addEventListener('click', () =>{
+    const name = document.getElementById('name').value
+    const words = document.getElementById('words').value
+    const output = document.getElementById('output')
+
+    let today = new Date();
+    let date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
+    let time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+
+    output.innerHTML = `Name: ${name}, Comment: ${words}, Date: ${date} ${time}`
+})

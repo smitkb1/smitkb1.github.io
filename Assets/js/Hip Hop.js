@@ -3,23 +3,18 @@ const xhr = new XMLHttpRequest()
 window.onload = () => {
     console.log('Current state: ', xhr.readyState)
     xhr.open('GET', 'HipHop.json', true)
-    /* console.log('Current state: ', xhr.readyState)
-
-    xhr.onprogress = () => {
-        console.log('Current state: ', xhr.readyState)
-    } */
+    
 
     xhr.onload = () => {
-        var i = 0;
+        let i = 0;
         if (xhr.status === 200) {
             console.log('Current state: ', xhr.readyState)
             console.log(xhr.responseText)
             const HipHop = JSON.parse(xhr.responseText)
             console.log(HipHop)
             HipHop.forEach(p => {
-                const {albumName, artistName, image } = p
                 console.log(p)
-                var URL = p.image
+                let URL = p.image
                 document.getElementById(`Image${i}`).src = URL
                 document.getElementById(`Album-Head${i}`).append(p.albumName)
                 document.getElementById(`Artist-Head${i}`).append(p.artistName)
@@ -34,12 +29,15 @@ window.onload = () => {
     xhr.send()
 }
 
-const comment =(e) =>{
+
+document.getElementById('Submit-Button').addEventListener('click', () =>{
     const name = document.getElementById('name').value
-    const comment = document.getElementById('comment').value
+    const words = document.getElementById('words').value
+    const output = document.getElementById('output')
 
-    document.getElementById(`${name}`)
-    document.getElementById(`${comment}`)
-}
+    let today = new Date();
+    let date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`
+    let time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
 
-document.getElementById('Submit-Button').addEventListener('click', comment).append(p.words)
+    output.innerHTML = `Name: ${name}, Comment: ${words}, Date: ${date} ${time}`
+})
